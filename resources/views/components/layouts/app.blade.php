@@ -256,16 +256,18 @@
     <footer class="py-12 text-white bg-gray-800">
         <div class="container px-4 mx-auto">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <!-- About Ziipi Technologies Ltd.  -->
-                <div data-aos='fade-up'>
+                <!-- About Ziipi Technologies Ltd. -->
+                <div data-aos="fade-up">
                     <h3 class="mb-4 text-xl font-semibold">About Us</h3>
-                    <p class="mb-4 text-gray-400">Ziipi Technologies Ltd is a tech-solutions company built by passionate
-                        individuals, dedicated to help our clients continuously create value for their customers.</p>
+                    <p class="mb-4 text-gray-400">
+                        Ziipi Technologies Ltd is a tech solutions company built by passionate individuals, dedicated to
+                        helping our clients continuously create value for their customers.
+                    </p>
                     <a href="{{ route('about') }}" class="text-yellow-400 hover:underline">Learn More</a>
                 </div>
 
                 <!-- Quick Links -->
-                <div data-aos='fade-up'>
+                <div data-aos="fade-up">
                     <h3 class="mb-4 text-xl font-semibold">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="{{ route('courses') }}" class="text-gray-400 hover:text-white">Programs</a></li>
@@ -280,7 +282,7 @@
                 </div>
 
                 <!-- Contact Information -->
-                <div data-aos='fade-up'>
+                <div data-aos="fade-up">
                     <h3 class="mb-4 text-xl font-semibold">Contact Us</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li>
@@ -299,14 +301,14 @@
                 </div>
 
                 <!-- Newsletter Signup -->
-                <div data-aos='fade-up'>
+                <div data-aos="fade-up">
                     <h3 class="mb-4 text-xl font-semibold">Stay Connected</h3>
                     <p class="mb-4 text-gray-400">Subscribe to our newsletter for updates and news.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Enter your email"
-                            class="w-full px-3 py-2 bg-white text-gray-800 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                    <form class="flex" action="#" method="POST">
+                        <input type="email" name="email" placeholder="Enter your email" required
+                            class="w-full px-3 py-2 bg-white text-gray-800 rounded-l-md focus:outline-none focus:ring-2 focus:ring-yellow-400" />
                         <button type="submit"
-                            class="px-4 py-2 transition duration-300 bg-yellow-400 hover:bg-yellow-400 rounded-r-md">
+                            class="px-4 py-2 font-semibold text-gray-800 transition duration-300 bg-yellow-400 rounded-r-md hover:bg-yellow-500">
                             Subscribe
                         </button>
                     </form>
@@ -315,11 +317,15 @@
 
             <!-- Social Media Links -->
             <div class="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-700 md:flex-row">
-                <div class="mb-4 md:mb-0">
-                    <a href="#" class="mr-4 text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="mr-4 text-gray-400 hover:text-white"><i class="fab fa-tiktok"></i></a>
-                    <a href="#" class="mr-4 text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="mr-4 text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                <div class="mb-4 md:mb-0 space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="TikTok"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
                 <div class="text-sm text-gray-400">
                     © {{ date('Y') }} Ziipi Technologies Ltd. All rights reserved.
@@ -327,8 +333,6 @@
             </div>
         </div>
     </footer>
-
-
 
 
 

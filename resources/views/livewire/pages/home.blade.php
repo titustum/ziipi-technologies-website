@@ -95,117 +95,102 @@ class extends Component
     </section>
 
 
-    <section class="w-full px-4 py-16 bg-white">
-        <div class="w-full mx-auto max-w-7xl">
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <section class="w-full px-8 py-24 bg-white">
+        <div class="max-w-7xl mx-auto grid gap-12 md:grid-cols-3">
 
-                <!-- Principal's Welcome Card -->
-                <div data-aos="fade-up" data-aos-duration="800" class="w-full md:col-span-2 lg:col-span-1">
-                    <div
-                        class="flex flex-col justify-between h-full p-6 transition-shadow duration-300 bg-white border border-gray-200 rounded-lg shadow-lg hover:shadow-xl">
-                        <div>
-                            <h3 class="mb-6 text-2xl font-bold text-center text-orange-600">
-                                Welcome to Tetu TVC
-                            </h3>
-                            <div class="my-6 text-center">
-                                <div
-                                    class="inline-block p-1 rounded-full bg-gradient-to-r from-orange-400 to-orange-600">
-                                    <img src="{{ asset('images/principal-tetu-tvc-2025-12345.jpg') }}"
-                                        class="object-cover w-48 h-48 border-4 border-white rounded-full shadow-inner"
-                                        alt="Principal Image">
-                                </div>
-                            </div>
-                            <div class="px-4 my-4 text-gray-700">
-                                <p class="mb-5 leading-relaxed">It's my pleasure to welcome you to Tetu Technical and
-                                    Vocational
-                                    College. We are
-                                    committed to providing quality programs, activities, and services that will enhance
-                                    and enrich your
-                                    academic and professional journey.</p>
-                                <div class="pt-3 font-bold text-center border-t border-gray-200">
-                                    <p class="text-gray-800">David Mugambi Kariuki</p>
-                                    <p class="text-orange-600">College Principal</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-6 text-center">
-                            <a href="{{ route('staff.members') }}"
-                                class="inline-block px-6 py-3 text-white transition duration-300 bg-orange-600 rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg">
-                                Meet Our Team <i class="ml-2 fas fa-arrow-right"></i>
-                            </a>
-                        </div>
+            <!-- CEO Welcome Card -->
+            <div data-aos="fade-up" data-aos-duration="700"
+                class="md:col-span-1 bg-gray-50 rounded-2xl p-10 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                <h3 class="text-4xl font-extrabold text-indigo-700 mb-8 text-center tracking-tight">Welcome to Ziipi
+                </h3>
+
+                <div class="flex justify-center mb-10">
+                    <div class="rounded-full border-4 border-indigo-300 overflow-hidden w-44 h-44 shadow-md">
+                        <img src="{{ asset('images/ziipi-founder.jpg') }}" alt="Ziipi Founder"
+                            class="object-cover w-full h-full" />
                     </div>
                 </div>
 
-                <!-- Right Side Cards -->
-                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"
-                    class="w-full md:col-span-2 lg:col-span-2">
-                    <div class="grid h-full gap-6 md:grid-cols-2">
-                        <!-- Admissions Card -->
-                        <div
-                            class="flex flex-col justify-between text-white transition-shadow duration-300 rounded-lg shadow-lg bg-gradient-to-br from-blue-500 to-blue-700 hover:shadow-xl">
-                            <div class="p-6">
-                                <div class="flex justify-center mb-4">
-                                    <div class="p-3 bg-blue-400 rounded-full bg-opacity-30">
-                                        <img src="{{ asset('images/user-tick.svg') }}" class="w-12 h-12"
-                                            alt="Admissions Icon">
-                                    </div>
-                                </div>
-                                <h4 class="mb-3 text-xl font-bold text-center">Admissions Ongoing!</h4>
-                                <p class="px-3 mb-4 text-center">Apply now for Artisan, Certificate, and Diploma
-                                    programs in various
-                                    technical fields.</p>
-                            </div>
-                            <div class="p-6 text-center">
-                                <a href="{{ route('admissions') }}"
-                                    class="inline-block px-5 py-2 text-blue-600 transition duration-300 bg-white rounded-full shadow-md hover:bg-gray-100 hover:shadow-lg">
-                                    Apply Now <i class="ml-2 fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
+                <p class="text-gray-700 text-center leading-relaxed mb-8">
+                    At Ziipi, we’re redefining the future with intuitive technology solutions designed to empower your
+                    business.
+                </p>
 
-                        <!-- Resources Card -->
-                        <div
-                            class="flex flex-col justify-between text-white transition-shadow duration-300 rounded-lg shadow-lg bg-gradient-to-br from-green-500 to-green-700 hover:shadow-xl">
-                            <div class="p-6">
-                                <div class="flex justify-center mb-4">
-                                    <div class="p-3 bg-green-400 rounded-full bg-opacity-30">
-                                        <img src="{{ asset('images/download-w-1.svg') }}" class="w-12 h-12"
-                                            alt="Resources Icon">
-                                    </div>
-                                </div>
-                                <h4 class="mb-3 text-xl font-bold text-center">Resources</h4>
-                                <p class="px-3 mb-4 text-center">Access important documents, course outlines, and
-                                    student handbooks in
-                                    our downloads section.</p>
-                            </div>
-                            <div class="p-6 text-center">
-                                <a href="{{ route('downloads') }}"
-                                    class="inline-block px-5 py-2 text-green-600 transition duration-300 bg-white rounded-full shadow-md hover:bg-gray-100 hover:shadow-lg">
-                                    Download <i class="ml-2 fas fa-download"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Programs Card -->
-                        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
-                            class="flex flex-col justify-center text-white transition-shadow duration-300 rounded-lg shadow-lg bg-gradient-to-br from-yellow-500 to-yellow-600 hover:shadow-xl md:col-span-2">
-                            <div class="p-8">
-                                <h4 class="mb-4 text-2xl font-bold text-center">Our Programs</h4>
-                                <p class="max-w-lg px-6 mx-auto mb-6 text-center">Discover our wide range of technical
-                                    and vocational
-                                    programs designed
-                                    to equip you with industry-relevant skills for today's job market.</p>
-                                <div class="text-center">
-                                    <a href="{{ route('courses') }}"
-                                        class="inline-block px-6 py-3 text-yellow-600 transition duration-300 bg-white rounded-full shadow-md hover:bg-gray-100 hover:shadow-lg">
-                                        Explore Programs <i class="ml-2 fas fa-book-open"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <p class="font-semibold text-gray-900">Jane Doe</p>
+                    <p class="text-indigo-600 font-medium">Founder & CEO</p>
                 </div>
+
+                <div class="mt-10 text-center">
+                    <a href="#team"
+                        class="inline-block px-10 py-3 border-2 border-indigo-700 text-indigo-700 font-semibold rounded-full hover:bg-indigo-700 hover:text-white transition duration-300">
+                        Meet Our Team
+                    </a>
+                </div>
+            </div>
+
+            <!-- Highlighted Services Cards -->
+            <div class="md:col-span-2 grid gap-10 sm:grid-cols-2">
+
+                <!-- Custom IT Services -->
+                <div data-aos="fade-up" data-aos-duration="700"
+                    class="bg-gradient-to-br from-indigo-600 to-indigo-800 rounded-2xl p-10 shadow-md text-white flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-3xl font-bold mb-4">Custom IT Services for Your Business</h4>
+                    <p class="mb-6 text-indigo-200 leading-relaxed">
+                        Managing IT shouldn’t be a challenge. We help control your tech costs by keeping your systems
+                        updated, secure, and optimized without the overhead of in-house training and certifications.
+                    </p>
+                    <a href="#contact"
+                        class="self-start px-6 py-2 bg-white text-indigo-700 font-semibold rounded-full shadow hover:bg-indigo-50 transition duration-300">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Data Protection & Cyber Security -->
+                <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"
+                    class="bg-gradient-to-br from-teal-500 to-teal-700 rounded-2xl p-10 shadow-md text-white flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-3xl font-bold mb-6">Data Protection & Cyber Security</h4>
+                    <ul class="mb-6 list-disc list-inside space-y-1 text-teal-200 font-medium">
+                        <li>Comprehensive Data Protection</li>
+                        <li>Advanced Cyber Security Solutions</li>
+                        <li>Managed IT for Continuous Safety</li>
+                    </ul>
+                    <a href="#security"
+                        class="self-start px-6 py-2 bg-white text-teal-700 font-semibold rounded-full shadow hover:bg-teal-50 transition duration-300">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Artificial Intelligence & Machine Learning -->
+                <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"
+                    class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-10 shadow-md text-white flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-3xl font-bold mb-6">Artificial Intelligence & Machine Learning</h4>
+                    <ul class="mb-6 list-disc list-inside space-y-1 text-purple-200 font-medium">
+                        <li>AI-Powered Business Solutions</li>
+                        <li>Predictive Analytics & Insights</li>
+                        <li>Automated Workflows & Smart Automation</li>
+                    </ul>
+                    <a href="#ai-ml"
+                        class="self-start px-6 py-2 bg-white text-purple-700 font-semibold rounded-full shadow hover:bg-purple-50 transition duration-300">
+                        Discover More
+                    </a>
+                </div>
+
+                <!-- Digital Consultancy -->
+                <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300"
+                    class="bg-gradient-to-br from-pink-500 to-pink-700 rounded-2xl p-10 shadow-md text-white flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                    <h4 class="text-3xl font-bold mb-6">Digital Consultancy</h4>
+                    <ul class="mb-6 list-disc list-inside space-y-1 text-pink-200 font-medium">
+                        <li>Strategic IT Planning</li>
+                        <li>Digital Transformation Roadmaps</li>
+                        <li>Tailored Business Tech Solutions</li>
+                    </ul>
+                    <a href="#consultancy"
+                        class="self-start px-6 py-2 bg-white text-pink-700 font-semibold rounded-full shadow hover:bg-pink-50 transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
@@ -213,100 +198,102 @@ class extends Component
 
 
 
-    <section class="py-20 bg-gray-50">
-        <div class="container px-4 mx-auto max-w-7xl">
-            <div class="mb-16 text-center">
-                <h2 class="mb-4 text-3xl font-bold text-gray-800 lg:text-4xl">Our Departments</h2>
-                <div class="w-24 h-1 mx-auto bg-orange-500 rounded"></div>
-                <p class="max-w-2xl mx-auto mt-4 text-lg text-gray-600">Explore our outstanding academic departments
-                    designed to
-                    provide industry-relevant skills and knowledge.</p>
-            </div>
 
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                @foreach ($departments as $department)
-                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $loop->index * 100 }}"
-                    class="overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg group hover:shadow-xl">
-                    <div class="relative h-56 overflow-hidden">
-                        <img src="{{  asset('storage/'.$department->photo)  }}" alt="{{ $department->name }}"
-                            class="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-110">
-                        <div
-                            class="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-t from-black/70 to-transparent group-hover:opacity-100">
-                        </div>
+    <section class="w-full bg-gray-50 py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-extrabold text-indigo-700 mb-6">Why Choose Ziipi?</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto mb-16">
+                Empower your business with IT solutions that combine innovation, security, and personalized support
+                tailored to your unique needs.
+            </p>
+
+            <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Expert Team -->
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="mb-5 p-5 bg-indigo-100 rounded-full inline-flex">
+                        <!-- Icon: user group -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-indigo-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z" />
+                        </svg>
                     </div>
-                    <div class="p-6">
-                        <h3
-                            class="mb-3 text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-orange-600">
-                            {{ $department->name }}</h3>
-                        <p class="mb-5 text-gray-600 line-clamp-3">{{ $department->short_desc }}</p>
-                        <div class="pt-2 border-t border-gray-100">
-                            <a href="{{ route('department', $department->slug) }}"
-                                class="inline-flex items-center font-semibold text-orange-600 transition-colors duration-300 hover:text-orange-700">
-                                Explore Department
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-2">Expert Team</h3>
+                    <p class="text-gray-600">
+                        Skilled professionals dedicated to delivering top-notch IT solutions and continuous support.
+                    </p>
                 </div>
-                @endforeach
 
-                <!-- General Programs Link -->
-                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ count($departments) * 100 }}"
-                    class="flex items-center justify-center overflow-hidden transition-all duration-300 rounded-lg shadow-lg bg-gradient-to-br from-orange-500 to-orange-600 hover:shadow-xl">
-                    <div class="p-8 text-center">
-                        <div class="flex justify-center mb-4">
-                            <div class="p-3 bg-white rounded-full bg-opacity-20">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-orange-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 class="mb-4 text-2xl font-bold text-white">Explore Departments</h3>
-                        <p class="mb-6 text-white text-opacity-90">Discover our full range of technical and vocational
-                            programs
-                            designed to equip you with job-ready skills.</p>
-                        <a href="{{ route('departments') }}"
-                            class="inline-block px-6 py-3 font-semibold text-orange-600 transition duration-300 bg-white rounded-full shadow-md hover:bg-gray-100 hover:shadow-lg">
-                            View All Departments
-                            <i class="ml-2 fas fa-arrow-right"></i>
-                        </a>
+                <!-- Proven Results -->
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="mb-5 p-5 bg-teal-100 rounded-full inline-flex">
+                        <!-- Icon: chart bar -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-teal-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17V9m4 8v-4m4 4v-6" />
+                        </svg>
                     </div>
+                    <h3 class="text-xl font-semibold text-teal-700 mb-2">Proven Results</h3>
+                    <p class="text-gray-600">
+                        Track record of driving business growth through innovative IT solutions and measurable impact.
+                    </p>
+                </div>
+
+                <!-- Cutting-Edge Technology -->
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="mb-5 p-5 bg-purple-100 rounded-full inline-flex">
+                        <!-- Icon: chip -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16 8v8M8 8v8" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-purple-700 mb-2">Cutting-Edge Technology</h3>
+                    <p class="text-gray-600">
+                        Leveraging AI, Machine Learning, and advanced cybersecurity to future-proof your business.
+                    </p>
+                </div>
+
+                <!-- Personalized Support -->
+                <div class="flex flex-col items-center text-center px-4">
+                    <div class="mb-5 p-5 bg-pink-100 rounded-full inline-flex">
+                        <!-- Icon: headset -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-pink-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M18 8a6 6 0 00-12 0v5a6 6 0 0012 0V8z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 17v3m-6 0h12" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-pink-700 mb-2">Personalized Support</h3>
+                    <p class="text-gray-600">
+                        Dedicated assistance and tailored solutions to meet your specific business goals.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <section class="py-20 bg-white">
         <div class="container px-4 mx-auto max-w-7xl">
             <div class="mb-16 text-center">
-                <h2 class="mb-4 text-3xl font-bold text-gray-800 lg:text-4xl">Student Success Stories</h2>
-                <div class="w-24 h-1 mx-auto bg-orange-500 rounded"></div>
-                <p class="max-w-2xl mx-auto mt-4 text-lg text-gray-600">Meet our graduates who have transformed their
-                    education
-                    into successful careers
+                <h2 class="mb-4 text-3xl font-bold text-gray-800 lg:text-4xl">Client Success Stories</h2>
+                <div class="w-24 h-1 mx-auto bg-indigo-600 rounded"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-lg text-gray-600">
+                    See how our clients have leveraged Ziipi’s IT solutions to transform their businesses.
                 </p>
             </div>
 
             <div class="testimonial-grid" data-aos="fade-up">
-
                 <div class="grid gap-8 md:grid-cols-3 max-w-7xl mx-auto px-4">
-
                     @foreach ($successStories as $story)
 
                     <!-- Success Story Card -->
                     <div class="relative z-10 p-6 bg-white rounded-lg shadow-lg flex flex-col h-full">
-
                         <div class="absolute transform -translate-x-1/2 -top-10 left-1/2">
-                            <div class="w-20 h-20 p-1 rounded-full bg-gradient-to-r from-orange-400 to-orange-600">
+                            <div class="w-20 h-20 p-1 rounded-full bg-gradient-to-r from-indigo-400 to-indigo-600">
                                 <img src="{{ $story->photo ? asset('storage/' . $story->photo) : asset('images/default-avatar.jpg') }}"
                                     alt="{{ $story->name }}" class="object-cover w-full h-full rounded-full">
                             </div>
@@ -314,9 +301,9 @@ class extends Component
 
                         <div class="pt-10 text-center flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-gray-800">{{ $story->name }}</h3>
-                            <p class="text-orange-600 mb-2">{{ $story->course }}, Class of {{ $story->year }}</p>
+                            <p class="text-indigo-600 mb-2">{{ $story->company }}, {{ $story->position }}</p>
 
-                            <div class="flex justify-center mb-4 text-orange-500">
+                            <div class="flex justify-center mb-4 text-indigo-500">
                                 {{-- Filled stars --}}
                                 @for ($i = 0; $i < $story->rating; $i++)
                                     <i class="fas fa-star"></i>
@@ -340,7 +327,7 @@ class extends Component
                             </div>
 
                             <p class="font-semibold text-gray-700 mt-auto">
-                                Currently: <span class="text-green-600">{{ $story->occupation }} at {{ $story->company
+                                Current Role: <span class="text-green-600">{{ $story->position }} at {{ $story->company
                                     }}</span>
                             </p>
                         </div>
@@ -352,8 +339,8 @@ class extends Component
                 <!-- View All Stories Button -->
                 <div class="mt-16 text-center">
                     <a href="{{ route('success.stories') }}"
-                        class="inline-block px-8 py-3 font-semibold text-white transition duration-300 bg-orange-600 rounded-full shadow-md hover:bg-orange-700 hover:shadow-lg">
-                        View All Success Stories
+                        class="inline-block px-8 py-3 font-semibold text-white transition duration-300 bg-indigo-600 rounded-full shadow-md hover:bg-indigo-700 hover:shadow-lg">
+                        View All Client Stories
                         <i class="ml-2 fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -362,84 +349,77 @@ class extends Component
                 <div class="grid gap-8 mt-20 md:grid-cols-2 lg:grid-cols-4">
                     <div data-aos="fade-up" data-aos-duration="800" class="p-6 text-center rounded-lg bg-gray-50">
                         <div class="flex justify-center">
-                            <div class="p-3 mb-4 text-white bg-orange-600 rounded-full">
-                                <i class="text-2xl fas fa-graduation-cap"></i>
+                            <div class="p-3 mb-4 text-white bg-indigo-600 rounded-full">
+                                <i class="text-2xl fas fa-users"></i>
                             </div>
                         </div>
-                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="92">0</span>%
+                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="150">0</span>+
                         </h3>
-                        <p class="text-gray-600">Graduation Rate</p>
+                        <p class="text-gray-600">Satisfied Clients</p>
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"
                         class="p-6 text-center rounded-lg bg-gray-50">
                         <div class="flex justify-center">
-                            <div class="p-3 mb-4 text-white bg-orange-600 rounded-full">
-                                <i class="text-2xl fas fa-briefcase"></i>
+                            <div class="p-3 mb-4 text-white bg-indigo-600 rounded-full">
+                                <i class="text-2xl fas fa-shield-alt"></i>
                             </div>
                         </div>
-                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="85">0</span>%
+                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="99">0</span>%
                         </h3>
-                        <p class="text-gray-600">Job Placement</p>
+                        <p class="text-gray-600">Data Protection Success</p>
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"
                         class="p-6 text-center rounded-lg bg-gray-50">
                         <div class="flex justify-center">
-                            <div class="p-3 mb-4 text-white bg-orange-600 rounded-full">
-                                <i class="text-2xl fas fa-user-tie"></i>
+                            <div class="p-3 mb-4 text-white bg-indigo-600 rounded-full">
+                                <i class="text-2xl fas fa-cogs"></i>
                             </div>
                         </div>
-                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="78">0</span>%
+                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="95">0</span>%
                         </h3>
-                        <p class="text-gray-600">Industry Partners</p>
+                        <p class="text-gray-600">Successful Project Delivery</p>
                     </div>
 
                     <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"
                         class="p-6 text-center rounded-lg bg-gray-50">
                         <div class="flex justify-center">
-                            <div class="p-3 mb-4 text-white bg-orange-600 rounded-full">
+                            <div class="p-3 mb-4 text-white bg-indigo-600 rounded-full">
                                 <i class="text-2xl fas fa-award"></i>
                             </div>
                         </div>
-                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="120">0</span>+
+                        <h3 class="text-4xl font-bold text-gray-800"><span class="counter" data-target="50">0</span>+
                         </h3>
                         <p class="text-gray-600">Industry Certifications</p>
                     </div>
                 </div>
 
-
-
             </div>
     </section>
 
 
 
-
-
-    <section class="py-16 bg-cyan-100">
+    <section class="py-16 bg-indigo-50">
         <div class="container px-4 mx-auto">
-            <h2 data-aos='fade-up' class="text-3xl font-bold text-center text-gray-800">Our Partners</h2>
-            <p data-aos='fade-up' class="mt-6 mb-12 text-center text-gray-600">
-                Our partnerships with industry leaders and educational authorities ensure that our programs remain
-                cutting-edge
-                and our graduates are well-prepared for the workforce.
+            <h2 data-aos="fade-up" class="text-3xl font-bold text-center text-gray-800">Our Trusted Partners</h2>
+            <p data-aos="fade-up" class="mt-6 mb-12 text-center text-gray-600 max-w-3xl mx-auto">
+                Collaborating with leading technology firms and industry innovators to deliver top-notch IT solutions
+                and services.
             </p>
 
             <div class="grid items-center grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
-
                 @foreach ($partners as $partner)
-                <div data-aos='fade-up' title="{{ $partner->name }}"
-                    class="flex items-center justify-center p-6 transition-shadow duration-300 bg-white rounded-lg shadow-md hover:shadow-lg">
-                    <img src="{{  asset('storage/'. $partner->logo)  }}" alt="{{ $partner->name }}"
-                        class="h-16 max-w-full">
+                <div data-aos="fade-up" title="{{ $partner->name }}"
+                    class="flex items-center justify-center p-6 bg-white rounded-lg shadow-md transition-shadow duration-300 hover:shadow-lg">
+                    <img src="{{ asset('storage/' . $partner->logo) }}" alt="{{ $partner->name }}"
+                        class="h-16 max-w-full object-contain">
                 </div>
                 @endforeach
-
             </div>
-
         </div>
     </section>
+
 
     <!-- Counter Animation Script -->
 
