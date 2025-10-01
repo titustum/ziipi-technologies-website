@@ -87,7 +87,7 @@ Pull requests, issues, and feature suggestions are welcome!
 ## 🌍 Demo (Coming Soon)
 
 You can check out a live demo at:
-[https://zipii.co.ke](https://zipii.co.ke) *(placeholder)*
+[https://ziipi.co.ke](https://ziipi.co.ke) *(placeholder)*
 
 ---
 
