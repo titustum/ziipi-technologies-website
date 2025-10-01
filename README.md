@@ -1,23 +1,26 @@
-# 🎓 Customizable College Website (Laravel + Filament)
+# Ziipi Technologies Ltd - Company Website
 
-A modern, open-source Laravel starter kit designed for colleges, TVET institutions, and schools. Built with **Filament 4**, **Volt**, **Livewire**, and **TailwindCSS**, this platform offers a powerful admin dashboard and a customizable public-facing website — all self-hosted and developer-friendly.
+Ziipi Technologies Ltd** is a next-generation tech startup focused on providing cutting-edge **cybersecurity solutions** and innovative **AI services** for businesses, governments, and institutions.
+
+We help organizations stay ahead of threats, secure their infrastructure, and leverage AI to drive intelligent automation.
 
 ---
 
 ## ✨ Features
 
-### 🔒 Admin Panel (Filament 4)
-- Manage Departments, Programs, Courses
-- Upload Tenders, Vacancies, Downloads
-- Staff Profiles & Principal Message
-- News & Events with image support
-- Home Page Sliders & Welcome Text
-- Newsletter Subscriber management
-- Spatie Media Library support
+## 🌐 Website Overview
+
+This site is built to showcase Ziipi's:
+
+- Cybersecurity services
+- AI-powered products
+- Company mission and team
+- Contact and inquiry options
 
 ### 🌐 Public Website (Volt + TailwindCSS)
+
 - Dynamic Home, About, Contact pages
-- Public display of programs, courses, staff, downloads
+- Public display of services, courses, staff, downloads
 - Student application form
 - Newsletter signup
 - Fully responsive and customizable
@@ -27,8 +30,8 @@ A modern, open-source Laravel starter kit designed for colleges, TVET institutio
 ## 🚀 Quick Start
 
 ```bash
-git clone https://github.com/titustum/customizable-college-website.git
-cd customizable-college-website
+git clone https://github.com/titustum/ziipi-technologies-website.git
+cd ziipi-technologies-website.git
 cp .env.example .env
 composer install
 php artisan key:generate
@@ -84,7 +87,7 @@ Pull requests, issues, and feature suggestions are welcome!
 ## 🌍 Demo (Coming Soon)
 
 You can check out a live demo at:
-[https://customizable-websites.com](https://customizable-websites.com) *(placeholder)*
+[https://zipii.co.ke](https://zipii.co.ke) *(placeholder)*
 
 ---
 
