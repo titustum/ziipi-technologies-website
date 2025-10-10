@@ -1,33 +1,29 @@
 <?php
 
-namespace App\Filament\Resources\Services\Tables;
+namespace App\Filament\Resources\CaseStudies\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class ServicesTable
+class CaseStudiesTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                ImageColumn::make('photo')->disk('public'),
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),
-                // TextColumn::make('short_desc')
-                //     ->searchable(),
-                // ImageColumn::make('banner_pic')->disk('public')
-                //     ->searchable(),
-                IconColumn::make('is_featured')
-                    ->boolean(),
+                ImageColumn::make('photo')->disk('public')
+                    ->searchable(),
+                ImageColumn::make('banner_pic')->disk('public')
+                    ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

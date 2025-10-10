@@ -11,6 +11,7 @@ Volt::route('/service/{slug}', 'pages.service')->name('service');
 Volt::route('/services', 'pages.services')->name('services');
 Volt::route('/team-members', 'pages.team-members')->name('team.members');
 Volt::route('/case-studies', 'pages.case-studies')->name('case.studies');
+Volt::route('/case-study/{slug}', 'pages.case-study')->name('case.study');
 Volt::route('/success-stories', 'pages.success-stories')
     ->name('success.stories');
 Volt::route('/create-success-story', 'pages.success-stories-create')
