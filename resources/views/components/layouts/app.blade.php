@@ -85,6 +85,24 @@
                 font-size: 15px;
             }
         }
+
+        /* Hide navigation buttons on small screens */
+        @media (max-width: 767px) {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none !important;
+            }
+        }
+
+        /* Optional: Ensure they're visible again on larger screens */
+        @media (min-width: 768px) {
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -155,9 +173,9 @@
                     ABOUT US
                 </a>
 
-                <a href="{{ route('staff.members') }}" @class(['px-3 py-5 transition-all hover:text-blue-800
+                <a href="{{ route('team.members') }}" @class(['px-3 py-5 transition-all hover:text-blue-800
                     hover:border-b-2 hover:border-blue-800', 'text-blue-800 border-b-2 border-blue-800'=>
-                    request()->routeIs('staff.members')])>
+                    request()->routeIs('team.members')])>
                     OUR TEAM
                 </a>
 
@@ -177,7 +195,7 @@
             <!-- CTA -->
             <div class="flex items-center font-semibold">
                 <a href="{{ route('contact') }}"
-                    class="hidden px-5 py-2 ml-4 text-white transition-all bg-blue-800 rounded-full shadow-md lg:inline hover:bg-yellow-400">
+                    class="hidden px-5 py-2 ml-4 text-white transition-all bg-blue-800 rounded-full shadow-md lg:inline hover:bg-blue-600">
                     Get In Touch
                 </a>
                 <a href="{{ route('contact') }}" class="px-4 py-3 transition-all md:ml-4 lg:hidden hover:text-blue-800">
@@ -193,7 +211,7 @@
             <div class="flex items-center justify-between mb-8">
                 <img src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="h-10">
                 <button id="close-mobile-menu" aria-label="Close mobile menu"
-                    class="hover:text-blue-800 text-2xl transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded">
+                    class="hover:text-blue-800 text-2xl transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 rounded">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -212,9 +230,9 @@
                     ABOUT US
                 </a>
 
-                <a href="{{ route('staff.members') }}" @class(['block px-2 py-3 transition-all rounded
+                <a href="{{ route('team.members') }}" @class(['block px-2 py-3 transition-all rounded
                     hover:bg-orange-100 hover:text-blue-800', 'text-blue-800 bg-orange-100'=>
-                    request()->routeIs('staff.members')])>
+                    request()->routeIs('team.members')])>
                     OUR TEAM
                 </a>
 
@@ -230,14 +248,9 @@
 
                 <!-- Admin Portal -->
                 <div class="pt-4 mt-4 border-t border-gray-200">
-                    <a href="{{ route('filament.admin.auth.login') }}" @class(['block px-2 py-3 transition-all rounded
-                        hover:bg-orange-100 hover:text-blue-800', 'text-blue-800 bg-orange-100'=>
-                        request()->routeIs('filament.admin.auth.login')])>
-                        ADMIN PORTAL
-                    </a>
 
                     <a href="{{ route('contact') }}"
-                        class="block px-2 py-3 mt-4 text-center text-white transition-all bg-blue-800 rounded hover:bg-orange-700">
+                        class="block px-2 py-3 mt-4 text-center text-white transition-all bg-blue-800 rounded hover:bg-blue-600">
                         Get In Touch
                     </a>
                 </div>
@@ -270,14 +283,13 @@
                 <div data-aos="fade-up">
                     <h3 class="mb-4 text-xl font-semibold">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="{{ route('courses') }}" class="text-gray-400 hover:text-white">Programs</a></li>
-                        <li><a href="{{ route('admissions') }}" class="text-gray-400 hover:text-white">Admissions</a>
+                        <li><a href="{{ route('services') }}" class="text-gray-400 hover:text-white">Programs</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-gray-400 hover:text-white">contact</a>
                         </li>
-                        <li><a href="{{ route('departments') }}" class="text-gray-400 hover:text-white">Departments</a>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Departments</a>
                         </li>
-                        <li><a href="{{ route('administration') }}"
-                                class="text-gray-400 hover:text-white">Administration</a></li>
-                        <li><a href="{{ route('downloads') }}" class="text-gray-400 hover:text-white">Downloads</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Administration</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Downloads</a></li>
                     </ul>
                 </div>
 

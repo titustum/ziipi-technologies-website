@@ -53,7 +53,7 @@ class extends Component
                                 {{ $content->slogan }}
                             </p>
                             <a href="{{ route('contact') }}"
-                                class="px-6 py-3 mt-6 text-lg font-semibold text-white transition-colors bg-orange-600 rounded-full opacity-0 hover:bg-orange-500 animate__animated"
+                                class="px-6 py-3 mt-6 text-lg font-semibold text-white transition-colors bg-blue-800 rounded-full opacity-0 hover:bg-blue-600 animate__animated"
                                 data-swiper-animation="animate__zoomIn" data-animation-delay="1.2s">
                                 {{ $content->button_text ?? 'Contact Us' }} <i class="ml-2 fas fa-arrow-right"></i>
                             </a>
@@ -77,7 +77,7 @@ class extends Component
                                 We protect your data, networks, and future with AI-driven cybersecurity solutions.
                             </p>
                             <a href="{{ route('contact') }}"
-                                class="px-6 py-3 mt-6 text-lg font-semibold text-white transition-colors bg-orange-600 rounded-full hover:bg-orange-500">
+                                class="px-6 py-3 mt-6 text-lg font-semibold text-white transition-colors bg-blue-800 rounded-full hover:bg-blue-700">
                                 Let's Talk <i class="ml-2 fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -98,36 +98,40 @@ class extends Component
     <section class="w-full px-8 py-24 bg-white">
         <div class="max-w-7xl mx-auto grid gap-12 md:grid-cols-3">
 
-            <!-- CEO Welcome Card -->
+            <!-- About Ziipi Card -->
             <div data-aos="fade-up" data-aos-duration="700"
                 class="md:col-span-1 bg-gray-50 rounded-2xl p-10 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
-                <h3 class="text-4xl font-extrabold text-indigo-700 mb-8 text-center tracking-tight">Welcome to Ziipi
-                </h3>
+                <h3 class="text-4xl font-extrabold text-indigo-700 mb-8 text-center tracking-tight">About Ziipi</h3>
 
-                <div class="flex justify-center mb-10">
-                    <div class="rounded-full border-4 border-indigo-300 overflow-hidden w-44 h-44 shadow-md">
-                        <img src="{{ asset('images/ziipi-founder.jpg') }}" alt="Ziipi Founder"
-                            class="object-cover w-full h-full" />
-                    </div>
+
+                <div class="text-gray-700 text-center leading-relaxed mb-8 space-y-6" data-aos="fade-up"
+                    data-aos-duration="700" data-aos-delay="100">
+                    <p>
+                        Ziipi is a next-generation technology company focused on building smart, scalable digital
+                        ecosystems that
+                        drive real business results. From startups to enterprise clients, we deliver cutting-edge
+                        solutions in
+                        cybersecurity, AI, cloud infrastructure, and more — all designed with flexibility, performance,
+                        and your
+                        growth in mind.
+                    </p>
+                    <p>
+                        Our team of experts combines deep industry knowledge with a passion for innovation to help you
+                        navigate the
+                        ever-evolving tech landscape. We believe in empowering businesses through technology, ensuring
+                        that your IT
+                        infrastructure is not just a support function, but a strategic asset that fuels your success.
+                    </p>
                 </div>
 
-                <p class="text-gray-700 text-center leading-relaxed mb-8">
-                    At Ziipi, we’re redefining the future with intuitive technology solutions designed to empower your
-                    business.
-                </p>
-
-                <div class="text-center">
-                    <p class="font-semibold text-gray-900">Jane Doe</p>
-                    <p class="text-indigo-600 font-medium">Founder & CEO</p>
-                </div>
-
-                <div class="mt-10 text-center">
-                    <a href="#team"
+                <div class="text-center mt-10">
+                    <a href="#about"
                         class="inline-block px-10 py-3 border-2 border-indigo-700 text-indigo-700 font-semibold rounded-full hover:bg-indigo-700 hover:text-white transition duration-300">
-                        Meet Our Team
+                        Learn More
                     </a>
                 </div>
             </div>
+
 
             <!-- Highlighted Services Cards -->
             <div class="md:col-span-2 grid gap-10 sm:grid-cols-2">
@@ -301,6 +305,11 @@ class extends Component
 
                         <div class="pt-10 text-center flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-gray-800">{{ $story->name }}</h3>
+                            @php
+                            $positions = ['Software Engineer', 'Project Manager', 'Data Analyst', 'IT Consultant',
+                            'Cybersecurity Specialist', 'AI Researcher'];
+                            $story->position = $positions[array_rand($positions)];
+                            @endphp
                             <p class="text-indigo-600 mb-2">{{ $story->company }}, {{ $story->position }}</p>
 
                             <div class="flex justify-center mb-4 text-indigo-500">
@@ -326,10 +335,7 @@ class extends Component
                                 </blockquote>
                             </div>
 
-                            <p class="font-semibold text-gray-700 mt-auto">
-                                Current Role: <span class="text-green-600">{{ $story->position }} at {{ $story->company
-                                    }}</span>
-                            </p>
+
                         </div>
                     </div>
 
