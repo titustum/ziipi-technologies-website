@@ -32,7 +32,7 @@ class WebVisitTrendChartWidget extends ChartWidget
                     'data' => $data,
                     'borderColor' => 'rgba(75, 192, 192, 1)',
                     'backgroundColor' => 'rgba(75, 192, 192, 0.2)',
-                    'fill' => true,
+                    'fill' => false,
                     'tension' => 0.3,
                 ],
             ],

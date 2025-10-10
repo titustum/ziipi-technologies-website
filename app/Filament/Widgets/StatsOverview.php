@@ -2,9 +2,9 @@
 
 namespace App\Filament\Widgets;
 
-use App\Models\Application;
-use App\Models\Course;
-use App\Models\Department;
+use App\Models\Contact;
+use App\Models\Service;
+use App\Models\CaseStudy;
 use App\Models\TeamMember;
 use Filament\Support\Icons\Heroicon;
 use Filament\Widgets\StatsOverviewWidget;
@@ -19,33 +19,27 @@ class StatsOverview extends StatsOverviewWidget
     protected function getStats(): array
     {
         return [
-            Stat::make('Departments', Department::count())
-                ->description('Academic divisions offering programs')
+            Stat::make('Case Studies', CaseStudy::count())
+                ->description('Our project highlights')
                 ->color('info')
                 ->icon(Heroicon::OutlinedBuildingOffice)
-                ->chart($this->getWeeklyTrend(Department::class, 'created_at'))
-                ->url(route('filament.admin.resources.departments.index')),
+                ->chart($this->getWeeklyTrend(CaseStudy::class, 'created_at'))
+                ->url(route('filament.admin.resources.case-studies.index')),
 
-            Stat::make('Courses', Course::count())
-                ->description('Diploma, Certificate, Artisan programs')
+            Stat::make('Services', Service::count())
+                ->description('Software Dev, Consultacy, AI programs')
                 ->color('success')
                 ->icon(Heroicon::OutlinedBookOpen)
-                ->chart($this->getWeeklyTrend(Course::class, 'created_at'))
-                ->url(route('filament.admin.resources.courses.index')),
+                ->chart($this->getWeeklyTrend(Service::class, 'created_at'))
+                ->url(route('filament.admin.resources.services.index')),
+ 
 
-            Stat::make('Team Members', TeamMember::count())
-                ->description('Lecturers, trainers, and staff')
-                ->color('primary')
-                ->icon(Heroicon::OutlinedUserGroup)
-                ->chart($this->getWeeklyTrend(TeamMember::class, 'created_at'))
-                ->url(route('filament.admin.resources.team-members.index')),
-
-            Stat::make('Applications', Application::count())
-                ->description('Submitted admission forms')
+            Stat::make('Contacts', Contact::count())
+                ->description('Submitted contacts forms')
                 ->color('warning')
                 ->icon(Heroicon::OutlinedDocumentText)
-                ->chart($this->getWeeklyTrend(Application::class, 'created_at'))
-                ->url(route('filament.admin.resources.applications.index')),
+                ->chart($this->getWeeklyTrend(Contact::class, 'created_at'))
+                ->url(route('filament.admin.resources.contacts.index')),
         ];
     }
 

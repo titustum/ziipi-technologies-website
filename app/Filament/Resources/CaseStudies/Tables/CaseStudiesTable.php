@@ -16,13 +16,11 @@ class CaseStudiesTable
     {
         return $table
             ->columns([
+                ImageColumn::make('photo')->disk('public')
+                    ->searchable(),
                 TextColumn::make('name')
                     ->searchable(),
                 TextColumn::make('slug')
-                    ->searchable(),
-                ImageColumn::make('photo')->disk('public')
-                    ->searchable(),
-                ImageColumn::make('banner_pic')->disk('public')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
