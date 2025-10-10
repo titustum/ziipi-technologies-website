@@ -26,7 +26,7 @@ class ServiceForm
                             ->required(),
                         FileUpload::make('photo')
                             ->disk('public')
-                            ->directory('departments')
+                            ->directory('services')
                             ->image()
                             ->required(),
                         TextInput::make('short_desc')
@@ -36,7 +36,7 @@ class ServiceForm
                             ->columnSpanFull(),
                         FileUpload::make('banner_pic')
                             ->disk('public')
-                            ->directory('departments')
+                            ->directory('services')
                             ->image()
                             ->required(),
 
