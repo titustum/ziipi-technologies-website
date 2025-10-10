@@ -46,7 +46,7 @@ class extends Component {
 
                 @if ($caseStudy->photo)
                 <img src="{{ asset('storage/' . $caseStudy->photo) }}" alt="{{ $caseStudy->name }}"
-                    class="object-cover w-full h-48 transition-transform duration-300 group-hover:scale-105">
+                    class=" w-full h-48 transition-transform duration-300 object-contain group-hover:scale-105">
                 @endif
 
                 <div class="p-5">
@@ -64,4 +64,36 @@ class extends Component {
             @endforeach
         </div>
     </div>
+
+
+
+    <!-- ====================== Call to Action (CTA) Section ====================== -->
+    <section class="py-16 text-white bg-gradient-to-r from-indigo-700 to-indigo-500">
+        <div class="container px-4 mx-auto">
+            <div class="flex flex-col items-center justify-between md:flex-row">
+                <div class="mb-8 text-center md:mb-0 md:text-left" data-aos="fade-right">
+                    <h2 class="mb-4 text-3xl font-bold">
+                        Let’s Build What’s Next — Together.
+                    </h2>
+                    <p class="max-w-xl text-white/90">
+                        Whether you're modernizing legacy systems, launching a new product, or scaling your
+                        infrastructure — Ziipi Technologies is your strategic tech partner. Reach out and discover how
+                        we can help.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4 sm:flex-row" data-aos="fade-left">
+                    <a href="{{ route('contact') }}"
+                        class="px-6 py-3 font-bold text-center text-indigo-600 transition duration-300 bg-white rounded-lg hover:bg-gray-100 shadow">
+                        Start the Conversation
+                    </a>
+                    <a href="{{ route('about') }}"
+                        class="px-6 py-3 font-bold text-center text-white transition duration-300 border-2 border-white rounded-lg hover:bg-white/10">
+                        Learn About Ziipi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </main>

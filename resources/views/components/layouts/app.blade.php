@@ -103,6 +103,16 @@
                 display: block;
             }
         }
+
+        #case-study-desc ul,
+        #case-study-desc ol {
+            list-style-type: disc;
+            padding: 10px;
+        }
+
+        #case-study-desc li {
+            padding-left: 10px
+        }
     </style>
 </head>
 
@@ -131,6 +141,13 @@
                     <i class="mr-1 fas fa-envelope"></i>
                     <a href="mailto:info@ziipi.co.ke" class="transition-colors hover:text-yellow-400">
                         info@ziipi.co.ke
+                    </a>
+                </div>
+
+                <div class="px-2 border-white md:border-l">
+                    <i class="mr-1 fas fa-briefcase"></i>
+                    <a href="{{  route('vacancies') }}" class="transition-colors hover:text-yellow-400">
+                        Vacancies
                     </a>
                 </div>
             </div>
@@ -173,16 +190,16 @@
                     ABOUT US
                 </a>
 
-                <a href="{{ route('case.studies') }}" @class(['px-3 py-5 transition-all hover:text-blue-800
-                    hover:border-b-2 hover:border-blue-800', 'text-blue-800 border-b-2 border-blue-800'=>
-                    request()->routeIs('case.studies')])>
-                    CASE STUDIES
-                </a>
-
                 <a href="{{ route('services') }}" @class(['px-3 py-5 transition-all hover:text-blue-800 hover:border-b-2
                     hover:border-blue-800', 'text-blue-800 border-b-2 border-blue-800'=>
                     request()->routeIs('services')])>
                     SERVICES
+                </a>
+
+                <a href="{{ route('case.studies') }}" @class(['px-3 py-5 transition-all hover:text-blue-800
+                    hover:border-b-2 hover:border-blue-800', 'text-blue-800 border-b-2 border-blue-800'=>
+                    request()->routeIs('case.studies')])>
+                    CASE STUDIES
                 </a>
 
                 <a href="{{ route('contact') }}" @class(['px-3 py-5 transition-all hover:text-blue-800 hover:border-b-2
@@ -236,17 +253,16 @@
                     CASE STUDIES
                 </a>
 
-                <a href="{{ route('services') }}" @class(['block px-2 py-3 transition-all rounded hover:bg-orange-100
-                    hover:text-blue-800', 'text-blue-800 bg-orange-100'=> request()->routeIs('services')])>
-                    SERVICES
-                </a>
-
                 <a href="{{ route('contact') }}" @class(['block px-2 py-3 transition-all rounded hover:bg-orange-100
                     hover:text-blue-800', 'text-blue-800 bg-orange-100'=> request()->routeIs('contact')])>
                     CONTACT US
                 </a>
 
-                <!-- Admin Portal -->
+                <a href="{{ route('services') }}" @class(['block px-2 py-3 transition-all rounded hover:bg-orange-100
+                    hover:text-blue-800', 'text-blue-800 bg-orange-100'=> request()->routeIs('services')])>
+                    SERVICES
+                </a>
+
                 <div class="pt-4 mt-4 border-t border-gray-200">
 
                     <a href="{{ route('contact') }}"

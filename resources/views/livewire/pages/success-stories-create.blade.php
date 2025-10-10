@@ -9,7 +9,7 @@ use App\Models\Course;
 use Livewire\WithFileUploads;
 
 new
-#[Title('Create Success Story | Tetu Technical & Vocational College')]
+#[Title('Create Success Story | Tetu Ziipi Technologies Ltd')]
 class extends Component
 {
     use WithFileUploads;
@@ -54,7 +54,7 @@ class extends Component
         SuccessStory::create($validated);
 
         // Optional: flash success message and reset
-        session()->flash('success', 'Your story has been submitted! Once approved, you’ll join the ranks of our amazing alumni who are shaping the future through skills learned at Tetu Technical & Vocational College.');
+        session()->flash('success', 'Your story has been submitted! Once approved, you’ll join the ranks of our amazing alumni who are shaping the future through skills learned at Tetu Ziipi Technologies Ltd.');
         $this->reset();
     }
 };
@@ -66,7 +66,7 @@ class extends Component
     <!-- Hero Section -->
     <section class="relative py-20 overflow-hidden bg-gray-900">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/gate.jpg') }}" alt="Tetu TVC Campus"
+            <img src="{{ asset('images/information-technology-background.jpg') }}" alt="Ziipi Campus"
                 class="object-cover w-full h-full opacity-30">
             <div class="absolute inset-0 bg-gradient-to-b from-gray-900/70 to-gray-900/90"></div>
         </div>
@@ -82,7 +82,7 @@ class extends Component
             <div class="max-w-3xl mx-auto mb-12 text-center" data-aos="fade-up">
                 <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">Share Your Success Story</h2>
                 <p class="text-lg text-gray-600">We'd love to hear about your experiences and achievements after
-                    graduating from Tetu Technical & Vocational College. Your story can inspire others!</p>
+                    graduating from Tetu Ziipi Technologies Ltd. Your story can inspire others!</p>
             </div>
 
             <!-- Flash Success -->
@@ -98,7 +98,7 @@ class extends Component
                 <div class="mb-6">
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Full Name</label>
                     <input type="text" id="name" wire:model.defer="name" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @error('name') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                 </div>
 
@@ -106,7 +106,7 @@ class extends Component
                 <div class="mb-6">
                     <label for="department_id" class="block mb-2 text-sm font-medium text-gray-700">Department</label>
                     <select id="department_id" wire:model.defer="department_id" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="" disabled>Select your department</option>
                         @foreach ($departments as $department)
                         <option value="{{ $department->id }}">{{ $department->name }}</option>
@@ -119,7 +119,7 @@ class extends Component
                 <div class="mb-6">
                     <label for="course" class="block mb-2 text-sm font-medium text-gray-700">Course Studied</label>
                     <input type="text" id="course" wire:model.defer="course" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @error('course') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                 </div>
 
@@ -127,7 +127,7 @@ class extends Component
                 <div class="mb-6">
                     <label for="year" class="block mb-2 text-sm font-medium text-gray-700">Graduation Year</label>
                     <input type="text" id="year" wire:model.defer="year" required maxlength="4"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @error('year') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                 </div>
 
@@ -138,7 +138,7 @@ class extends Component
                             Plumber)</span>
                     </label>
                     <input type="text" id="occupation" wire:model.defer="occupation" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @error('occupation') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                 </div>
 
@@ -149,7 +149,7 @@ class extends Component
                             Electricals)</span>
                     </label>
                     <input type="text" id="company" wire:model.defer="company" required
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @error('company') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                 </div>
 
@@ -162,7 +162,7 @@ class extends Component
                     </label>
                     <textarea id="statement" wire:model.defer="statement" rows="6" required
                         placeholder="e.g. Tetu TVC gave me hands-on skills in plumbing that helped me start my own business..."
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                     @error('statement') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
                 </div>
 
@@ -172,7 +172,7 @@ class extends Component
                         Rate Your Experience <span class="text-gray-500 text-sm">(1 = poor, 5 = excellent)</span>
                     </label>
                     <input type="range" id="rating" wire:model.defer="rating" min="1" max="5" step="1"
-                        class="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-orange-500">
+                        class="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500">
                     <div class="flex justify-between text-sm text-gray-600 mt-1 px-1">
                         <span>1</span>
                         <span>2</span>
@@ -188,7 +188,7 @@ class extends Component
                 <div class="mb-6">
                     <label for="photo" class="block mb-2 text-sm font-medium text-gray-700">Upload a Photo</label>
                     <input type="file" id="photo" wire:model="photo" accept="image/*"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @error('photo') <span class="text-red-600 text-sm">{{ $message }}</span> @enderror
 
                     @if ($photo)
@@ -202,7 +202,7 @@ class extends Component
                 <!-- Submit Button -->
                 <div class="text-center">
                     <button type="submit"
-                        class="px-6 py-3 text-white bg-orange-600 hover:bg-orange-700 font-semibold rounded-lg shadow-lg transition duration-300">
+                        class="px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 font-semibold rounded-lg shadow-lg transition duration-300">
                         Submit Story
                     </button>
                 </div>

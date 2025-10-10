@@ -51,7 +51,8 @@ class extends Component {
                 </p>
                 @endif
 
-                <div class="prose prose-lg max-w-none text-gray-800">
+                <div id="case-study-desc" class="prose prose-lg max-w-none text-gray-800">
+                    {{-- Render full description as HTML --}}
                     {!! $caseStudy->full_desc !!}
                 </div>
             </div>

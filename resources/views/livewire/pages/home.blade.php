@@ -305,12 +305,8 @@ class extends Component
 
                         <div class="pt-10 text-center flex-grow flex flex-col">
                             <h3 class="text-xl font-bold text-gray-800">{{ $story->name }}</h3>
-                            @php
-                            $positions = ['Software Engineer', 'Project Manager', 'Data Analyst', 'IT Consultant',
-                            'Cybersecurity Specialist', 'AI Researcher'];
-                            $story->position = $positions[array_rand($positions)];
-                            @endphp
-                            <p class="text-indigo-600 mb-2">{{ $story->company }}, {{ $story->position }}</p>
+
+                            <p class="text-indigo-600 mb-2">{{ $story->company }}</p>
 
                             <div class="flex justify-center mb-4 text-indigo-500">
                                 {{-- Filled stars --}}
