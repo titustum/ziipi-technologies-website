@@ -9,13 +9,11 @@ new
 #[Title('Service Details')]
 class extends Component
 {
-    public $service;
-    public $services = [];
+    public $service; 
     public $successStories = [];
 
     public function mount($slug)
-    {
-        $this->services = Service::all();
+    { 
         $this->service = Service::where('slug', $slug)->firstOrFail();
         $this->successStories = SuccessStory::take(3)->get();
     }
@@ -165,6 +163,7 @@ class extends Component
         <!-- Client Success Stories Carousel -->
         <section class="py-16 bg-gray-50">
             <div class="container px-4 mx-auto">
+                <!-- Section Header -->
                 <div class="mb-12 text-center" data-aos="fade-up">
                     <h2 class="text-3xl font-bold">Client Success Stories</h2>
                     <div class="w-24 h-1 mx-auto mt-4 bg-blue-600 rounded"></div>
@@ -173,41 +172,48 @@ class extends Component
                     </p>
                 </div>
 
+                <!-- Swiper Carousel -->
                 <div class="testimonial-slider" data-aos="fade-up">
-                    <!-- Slider will be initialized with JavaScript -->
                     <div class="swiper-container overflow-hidden">
                         <div class="swiper-wrapper">
-                            <!-- Sample testimonials - in production, these would come from your database -->
-
                             @foreach ($successStories as $story)
-
                             <div class="swiper-slide">
                                 <div class="p-6 bg-white rounded-lg shadow-md">
+                                    <!-- Header with photo and info -->
                                     <div class="flex items-center mb-4">
                                         <div class="w-16 h-16 mr-4 overflow-hidden rounded-full">
-                                            <img src="{{ asset('storage/'.$story->photo) }}"
+                                            <img src="{{ asset('storage/' . $story->photo) }}"
                                                 alt="{{ $story->name }} Photo" class="object-cover w-full h-full">
                                         </div>
                                         <div>
                                             <h4 class="font-bold">{{ $story->name }}</h4>
-                                            <p class="text-sm text-gray-600">Class of {{ $story->year }}, Now at
-                                                {{
-                                                $story->company}}
+                                            <p class="text-sm text-gray-600">
+                                                {{ $story->company }}
                                             </p>
+
+                                            <!-- ⭐ Star Rating -->
+                                            <div class="flex mt-1">
+                                                @for ($i = 0; $i < $story->rating; $i++)
+                                                    <i class="fas fa-star text-yellow-400 text-sm mr-1"></i>
+                                                    @endfor
+                                                    @for ($i = 0; $i < 5 - $story->rating; $i++)
+                                                        <i class="far fa-star text-gray-300 text-sm mr-1"></i>
+                                                        @endfor
+                                            </div>
                                         </div>
                                     </div>
-                                    <p class="italic text-gray-600">"{{ $story->statement }}"</p>
-                                    <p class="text-sm text-gray-600">
+
+                                    <!-- Testimonial Content -->
+                                    <p class="italic text-gray-600 mb-4">"{{ $story->statement }}"</p>
+                                    <p class="text-sm text-gray-500">
                                         Project Completed in {{ $story->year }}, Now Scaling at {{ $story->company }}
                                     </p>
-
                                 </div>
                             </div>
-
                             @endforeach
                         </div>
 
-                        <!-- Slider controls -->
+                        <!-- Swiper Controls -->
                         <div class="mt-6 swiper-pagination"></div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
@@ -215,6 +221,7 @@ class extends Component
                 </div>
             </div>
         </section>
+
 
         <!-- ====================== Call to Action (CTA) Section ====================== -->
         <section class="py-16 text-white bg-gradient-to-r from-indigo-700 to-indigo-500">
