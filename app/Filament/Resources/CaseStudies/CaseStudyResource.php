@@ -21,6 +21,7 @@ class CaseStudyResource extends Resource
     protected static ?string $model = CaseStudy::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTrophy;
+
     protected static string|BackedEnum|null $activeNavigationIcon = Heroicon::Trophy;
 
     protected static ?string $recordTitleAttribute = 'name';

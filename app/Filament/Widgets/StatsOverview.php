@@ -2,10 +2,9 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\CaseStudy;
 use App\Models\Contact;
 use App\Models\Service;
-use App\Models\CaseStudy;
-use App\Models\TeamMember;
 use Filament\Support\Icons\Heroicon;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -32,7 +31,6 @@ class StatsOverview extends StatsOverviewWidget
                 ->icon(Heroicon::OutlinedBookOpen)
                 ->chart($this->getWeeklyTrend(Service::class, 'created_at'))
                 ->url(route('filament.admin.resources.services.index')),
- 
 
             Stat::make('Contacts', Contact::count())
                 ->description('Submitted contacts forms')
