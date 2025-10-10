@@ -173,10 +173,10 @@
                     ABOUT US
                 </a>
 
-                <a href="{{ route('team.members') }}" @class(['px-3 py-5 transition-all hover:text-blue-800
+                <a href="{{ route('case.studies') }}" @class(['px-3 py-5 transition-all hover:text-blue-800
                     hover:border-b-2 hover:border-blue-800', 'text-blue-800 border-b-2 border-blue-800'=>
-                    request()->routeIs('team.members')])>
-                    OUR TEAM
+                    request()->routeIs('case.studies')])>
+                    CASE STUDIES
                 </a>
 
                 <a href="{{ route('services') }}" @class(['px-3 py-5 transition-all hover:text-blue-800 hover:border-b-2
@@ -209,7 +209,7 @@
     <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-white w-80 shadow-xl h-screen overflow-y-auto">
         <div class="p-6">
             <div class="flex items-center justify-between mb-8">
-                <img src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="h-10">
+                <img src="{{ asset('images/ziipi-logo.png') }}" alt="Logo" class="h-10">
                 <button id="close-mobile-menu" aria-label="Close mobile menu"
                     class="hover:text-blue-800 text-2xl transition-colors focus:outline-none focus:ring-2 focus:ring-blue-600 rounded">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
@@ -230,10 +230,10 @@
                     ABOUT US
                 </a>
 
-                <a href="{{ route('team.members') }}" @class(['block px-2 py-3 transition-all rounded
+                <a href="{{ route('case.studies') }}" @class(['block px-2 py-3 transition-all rounded
                     hover:bg-orange-100 hover:text-blue-800', 'text-blue-800 bg-orange-100'=>
-                    request()->routeIs('team.members')])>
-                    OUR TEAM
+                    request()->routeIs('case.studies')])>
+                    CASE STUDIES
                 </a>
 
                 <a href="{{ route('services') }}" @class(['block px-2 py-3 transition-all rounded hover:bg-orange-100

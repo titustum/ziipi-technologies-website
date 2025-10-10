@@ -32,7 +32,7 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Orange,
             ])
             ->font('Inter')
-            ->favicon(asset('images/logo.jpeg'))
+            ->favicon(asset('images/ziipi-logo.png'))
             // ->brandLogo(asset('images/logo.jpeg'))
             ->brandName('Web Admin')
             // ->globalSearchKeyBindings(['ctrl+k', 'cmd+k'])
