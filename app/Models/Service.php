@@ -21,5 +21,4 @@ class Service extends Model
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
-
 }

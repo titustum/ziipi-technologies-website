@@ -21,12 +21,12 @@ class HeroSlideContentResource extends Resource
     protected static ?string $model = HeroSlideContent::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPlayCircle;
+
     protected static string|BackedEnum|null $activeNavigationIcon = Heroicon::PlayCircle;
- 
+
     protected static ?string $navigationLabel = 'Hero Slides';
 
-    protected static ?string $recordTitleAttribute = 'title'; 
-
+    protected static ?string $recordTitleAttribute = 'title';
 
     public static function form(Schema $schema): Schema
     {
