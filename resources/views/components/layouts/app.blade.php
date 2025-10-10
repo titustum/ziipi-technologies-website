@@ -133,10 +133,10 @@
             </nav>
 
             <div class="flex items-center justify-between w-full md:w-auto">
-                <div class="px-2">
+                <a href="tel:+254711558489" class="px-2">
                     <i class="mr-1 fas fa-phone-alt"></i>
-                    <span>+254 758 660 300</span>
-                </div>
+                    <span>+254 711 558 489</span>
+                </a>
                 <div class="px-2 border-white md:border-l">
                     <i class="mr-1 fas fa-envelope"></i>
                     <a href="mailto:info@ziipi.co.ke" class="transition-colors hover:text-yellow-400">
@@ -319,7 +319,7 @@
                         </li>
                         <li>
                             <i class="mr-2 text-yellow-400 fas fa-phone"></i>
-                            +254 758 660 300
+                            +254 711 558 489
                         </li>
                         <li>
                             <i class="mr-2 text-yellow-400 fas fa-envelope"></i>

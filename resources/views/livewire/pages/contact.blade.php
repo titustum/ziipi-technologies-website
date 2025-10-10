@@ -91,8 +91,9 @@ class extends Component
                 </div>
                 <div>
                   <p class="font-medium text-gray-900">Phone</p>
-                  <a href="tel:+254758660300" class="mt-1 text-blue-600 transition hover:text-blue-800">+254 758 660
-                    300</a>
+                  <a href="tel:+254711558489" class="mt-1 text-blue-600 transition hover:text-blue-800">
+                    +254 711 558489
+                  </a>
                 </div>
               </li>
 
